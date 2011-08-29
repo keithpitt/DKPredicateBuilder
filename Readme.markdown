@@ -150,7 +150,7 @@ The key doens't end with the value
 The key `CONTAINS` the value
 
 ```objective-c
-[predicateBuilder where:@"username" endsWith:@"eith"];
+[predicateBuilder where:@"username" contains:@"eith"];
 ```
 
 `- (id)where:(NSString *)key like:(NSString *)value;`
