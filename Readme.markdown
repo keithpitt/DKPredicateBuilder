@@ -76,7 +76,7 @@ background thread. This is usefull for arrays with many records.
 
 ### Working with Core Data
 
-If you want to use `DKArrayQuery` with Core Data, I highly recommend you
+If you want to use `DKPredicateBuilder` with Core Data, I highly recommend you
 check out [DKCoreData](https://github.com/keithpitt/DKCoreData), but if
 you just want to use this class directly with an `NSFetchRequest` this
 is how it would look:
