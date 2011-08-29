@@ -28,7 +28,7 @@ For more information on the `NSPredicate` class, check out the
 
 ### Working with NSArray
 
-`DKPredicateBuilder` also ships with a way to use the predicate builder
+`DKPredicateBuilder` ships with a way to use the predicate builder
 with `NSArray` objects.
 
 ```objective-c
@@ -48,14 +48,14 @@ DKArrayQuery * arrayQuery = [DKArrayQuery queryWithArray:namesArray];
 [arrayQuery orderBy:@"first_name" ascending:YES];
 
 [arrayQuery perform:^(NSArray * records) {
-  // Returns an array with in this order;
+  // Returns an array with this order;
   //   [NSDictionary dictionaryWithObjectsAndKeys:@"Keith", @"first_name", nil]
   //   [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil]
 }];
 ```
 
-There is also an `NSArray` category to make creating `DKArrayQuery`
-objects easy.
+`NSArray+ArrayQuery.h` provides an Objective-C category that makes creating
+instances of `DKArrayQuery` easy.
 
 ```objective-c
 #import "NSArray+ArrayQuery.h"
@@ -67,6 +67,8 @@ DKArrayQuery * arrayQuery = [[namesArray query] where:@"first_name" isNull:NO];
 background thread. This is usefull for arrays with many records.
 
 ```objective-c
+// The block will be called on the main thread while the records
+// are calculated in a background thread.
 [arrayQuery perform:^(NSArray * records) {
   // ...
 } background:YES];
