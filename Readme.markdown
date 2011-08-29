@@ -26,14 +26,6 @@ For more information on the `NSPredicate` class, check out the
 
 ## Usage
 
-### Chaining
-
-You can chain together predicates like so:
-
-```objective-c
-[[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
-```
-
 ### Working with NSArray
 
 `DKPredicateBuilder` also ships with a way to use the predicate builder
@@ -104,6 +96,14 @@ NSFetchRequest * fetchRequest = [NSFetchRequest new];
 
 // Execute the fetch request
 NSArray * objects = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+```
+
+### Chaining
+
+You can chain together predicates like so:
+
+```objective-c
+[[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
 ```
 
 ## Installation
