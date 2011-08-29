@@ -39,6 +39,29 @@
     if ([self.sorters count] > 0)
         results = [results sortedArrayUsingDescriptors:self.sorters];
     
+    // Apply the limit/offset
+    if (self.limit || self.offset) {
+        
+        int count = [results count];
+        
+        // Calculate the start/end of the range
+        int start = self.offset ? [self.offset intValue] : 0;
+        int length = self.limit ? [self.limit intValue] : count;
+        
+        // If the length is more than the total results
+        if (length > count)
+            length = count;
+        
+        // If the start is more than the length, return no results
+        if (start > length)
+            return [NSArray array];
+        
+        // Apply the limit/offset
+        NSRange range = NSMakeRange(start, length);
+        results = [results subarrayWithRange:range];
+        
+    }
+    
     return results;
     
 }

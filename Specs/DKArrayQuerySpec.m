@@ -38,6 +38,38 @@ context(@"- (void)perform:(DKArrayQueryFinish)block", ^{
         
     });
     
+    it(@"should work with limit and offset", ^{
+        
+        DKArrayQuery * arrayQuery = [DKArrayQuery queryWithArray:namesArray];
+        
+        [arrayQuery limit:2];
+        [arrayQuery offset:2];
+        
+        [arrayQuery perform:^(NSArray * records) {
+            
+            expect([records count]).toEqual(2);
+            expect([records objectAtIndex:0]).toEqual([namesArray objectAtIndex:2]);
+            expect([records objectAtIndex:1]).toEqual([namesArray objectAtIndex:3]);
+            
+        }];
+        
+    });
+    
+    it(@"should return no results if you give it bogus limit and offset", ^{
+        
+        DKArrayQuery * arrayQuery = [DKArrayQuery queryWithArray:namesArray];
+        
+        [arrayQuery limit:204];
+        [arrayQuery offset:363];
+        
+        [arrayQuery perform:^(NSArray * records) {
+            
+            expect([records count]).toEqual(0);
+            
+        }];
+        
+    });
+    
     it(@"should allow you to sort objects", ^{
         
         DKArrayQuery * arrayQuery = [DKArrayQuery queryWithArray:namesArray];
