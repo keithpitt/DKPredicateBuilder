@@ -306,10 +306,6 @@ Specify an offset for the query
 
 Returns an `NSCompoundPredicate` with all the predicates defined
 
-`- (NSString *)compoundPredicateKey;`
-
-Returns an MD5 hash of the NSCompoundPredicate. This is usefull for cache keys.
-
 ## Running Specs
 
 To run the specs, open [DKPredicateBuilder.xcodeproj](https://github.com/keithpitt/DKPredicateBuilder/tree/master/DKPredicateBuilder.xcodeproj) project, and run the `Specs` target. You will need to
