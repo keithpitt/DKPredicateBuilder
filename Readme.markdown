@@ -3,11 +3,6 @@
 The predicate builder is an easy way to generate `NSPredicate` objects for use
 with your `NSFetchRequest` and `NSArray` queries.
 
-It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
-and [The Frontier Group](http://www.thefrontiergroup.com.au)
-
-## Usage
-
 ```objective-c
 #import "DKPredicateBuilder.h"
 
@@ -23,7 +18,12 @@ NSLog(@"%@", [[predicateBuilder compoundPredicate] predicateFormat]);
 [predicateBuilder release];
 ```
 
-#### Chaining
+It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
+and [The Frontier Group](http://www.thefrontiergroup.com.au)
+
+## Usage
+
+### Chaining
 
 You can also chain together predicates like this
 
@@ -31,7 +31,7 @@ You can also chain together predicates like this
 [[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
 ```
 
-#### Working with NSArray
+### Working with NSArray
 
 `DKPredicateBuilder` also ships with a way to use the predicate builder
 with `NSArray` objects.
@@ -77,7 +77,7 @@ background thread. This is usefull for arrays with many records.
 } background:YES];
 ```
 
-#### Working with Core Data
+### Working with Core Data
 
 If you want to use `DKArrayQuery` with Core Data, I highly recommend you
 check out [DKCoreData](https://github.com/keithpitt/DKCoreData), but if
