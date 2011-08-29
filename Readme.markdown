@@ -44,9 +44,9 @@ DKArrayQuery * arrayQuery = [DKArrayQuery queryWithArray:namesArray];
 [arrayQuery orderBy:@"first_name" ascending:YES];
 
 [arrayQuery perform:^(NSArray * records) {
-  // Returns an array with:
-  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil]
+  // Returns an array with in this order;
   //   [NSDictionary dictionaryWithObjectsAndKeys:@"Keith", @"first_name", nil]
+  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil]
 }];
 ```
 
