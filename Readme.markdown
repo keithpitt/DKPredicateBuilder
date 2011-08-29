@@ -321,7 +321,7 @@ Returns an `NSCompoundPredicate` with all the predicates defined
 
 ## Running Specs
 
-To run the specs, open [DKPredicateBuilder.xcodeproj](https://github.com/keithpitt/DKPredicateBuilder/tree/master/DKPredicateBuilder.xcodeproj) project, and run the `Specs` target. You will need to
+To run the specs, open [DKPredicateBuilder.xcodeproj](https://github.com/keithpitt/DKPredicateBuilder/tree/master/DKPredicateBuilder.xcodeproj) project, and run the `Specs` target.
 
 ## Note on Patches/Pull Requests
 
