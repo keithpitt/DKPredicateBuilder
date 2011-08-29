@@ -66,7 +66,6 @@ typedef void (^DKQueryFinishBlock)(NSArray * records, NSError * error);
 
 - (id)limit:(int)value;
 - (id)offset:(int)value;
-- (id)batchSize:(int)value;
 
 - (NSCompoundPredicate *)compoundPredicate;
 - (NSString *)compoundPredicateKey;

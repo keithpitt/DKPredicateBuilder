@@ -333,15 +333,6 @@
     
 }
 
-- (id)batchSize:(int)value {
-    
-    // Set the batch size
-    self.batchSize = [NSNumber numberWithInt:value];
-    
-    return self;
-    
-}
-
 - (NSCompoundPredicate *)compoundPredicate {
     
     // Collect all the predicates
