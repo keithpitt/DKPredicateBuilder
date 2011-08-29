@@ -1,0 +1,3 @@
+[submodule "External/DKSupport"]
+	path = External/DKSupport
+	url = git@github.com:/keithpitt/DKSupport.git
