@@ -21,8 +21,8 @@ NSLog(@"%@", [[predicateBuilder compoundPredicate] predicateFormat]);
 It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
 and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
-For more information on the `NSPredicate` class, I highly recomend you checkout
-the [Predicate Programming Guide](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html)
+For more information on the `NSPredicate` class, check out the
+[Predicate Programming Guide](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html)
 
 ## Usage
 
@@ -115,7 +115,7 @@ XCode project.
 
 `- (id)where:(DKPredicate *)predicate;`
 
-Add a custom NSPredicate to the builder
+Add your own `NSPredicate` to the builder
 
 `- (id)where:(NSString *)key isTrue:(BOOL)value;`
 
