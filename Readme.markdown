@@ -279,7 +279,7 @@ The key is between the first value and the second value
 
 `- (id)orderBy:(NSString *)column ascending:(BOOL)ascending;`
 
-Creates an NSSortDescriptor and add it to the `sorters` property on the
+Creates an `NSSortDescriptor` and add it to the `sorters` property on the
 `DKPropertyBuilder`
 
 ```objective-c
