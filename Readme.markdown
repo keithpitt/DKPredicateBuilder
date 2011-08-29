@@ -64,9 +64,7 @@ background thread. This is usefull for arrays with many records.
 
 ```objective-c
 [arrayQuery perform:^(NSArray * records) {
-  // Returns an array with:
-  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil]
-  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Keith", @"first_name", nil]
+  // ...
 } background:YES];
 ```
 
