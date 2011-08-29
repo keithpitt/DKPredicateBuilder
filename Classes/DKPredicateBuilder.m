@@ -12,7 +12,7 @@
 
 @implementation DKPredicateBuilder
 
-@synthesize predicates, sorters, columns, limit, offset, batchSize;
+@synthesize predicates, sorters, limit, offset;
 @synthesize lastPerformDate;
 
 - (id)init {
@@ -25,18 +25,7 @@
         // Create the sorters mutable array
         sorters = [[NSMutableArray alloc] init];
         
-        // Create the columns mutable array
-        columns = [[NSMutableArray alloc] init];
-        
     }
-    
-    return self;
-    
-}
-
-- (id)only:(NSString *)column {
-    
-    [self.columns addObject:column];
     
     return self;
     
@@ -376,11 +365,9 @@
     
     [predicates release];
     [sorters release];
-    [columns release];
     
     [limit release];
     [offset release];
-    [batchSize release];
     
     [super dealloc];
     

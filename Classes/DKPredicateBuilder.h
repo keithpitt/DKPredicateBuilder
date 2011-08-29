@@ -16,7 +16,6 @@ typedef void (^DKQueryFinishBlock)(NSArray * records, NSError * error);
     
     NSMutableArray * predicates;
     NSMutableArray * sorters;
-    NSMutableArray * columns;
     
     NSNumber * limit;
     NSNumber * offset;
@@ -25,14 +24,10 @@ typedef void (^DKQueryFinishBlock)(NSArray * records, NSError * error);
 
 @property (nonatomic, retain) NSMutableArray * predicates;
 @property (nonatomic, retain) NSMutableArray * sorters;
-@property (nonatomic, retain) NSMutableArray * columns;
 @property (nonatomic, retain) NSNumber * limit;
 @property (nonatomic, retain) NSNumber * offset;
-@property (nonatomic, retain) NSNumber * batchSize;
 
 @property (nonatomic, copy) NSDate * lastPerformDate;
-
-- (id)only:(NSString *)column;
 
 - (id)where:(DKPredicate *)predicate;
 
