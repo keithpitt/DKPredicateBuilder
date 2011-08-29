@@ -84,8 +84,11 @@ is how it would look:
 ```objective-c
 // Create the predicate builder
 DKPredicateBuilder * predicateBuilder = [[DKPredicateBuilder alloc] init];
+
 [predicateBuilder where:@"name" equals:@"Something"];
 [predicateBuilder orderBy:@"name" ascending:YES];
+[predicateBuilder limit:20];
+[predicateBuilder offset:20];
 
 // Setup a request for an existing object
 NSFetchRequest * fetchRequest = [NSFetchRequest new];
@@ -95,6 +98,14 @@ NSFetchRequest * fetchRequest = [NSFetchRequest new];
 
 // Add the sorters
 [fetchRequest setSortDescriptors:[predicateBuilder sorters]];
+
+// Set the limit if one is defined
+if (self.limit)
+    [fetchRequest setFetchLimit:[predicateBuilder.limit integerValue]];
+        
+// Set the offset if one is defined
+if (self.offset)
+    [fetchRequest setFetchOffset:[predicateBuilder.offset integerValue]];
 
 // Execute the fetch request
 NSArray * objects = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
