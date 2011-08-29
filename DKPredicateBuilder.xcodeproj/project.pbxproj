@@ -35,6 +35,9 @@
 		5304B10D140B420E00DF687E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304B10C140B420E00DF687E /* CFNetwork.framework */; };
 		5304B10F140B421A00DF687E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304B10E140B421A00DF687E /* MobileCoreServices.framework */; };
 		5304B111140B423800DF687E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304B110140B423800DF687E /* SystemConfiguration.framework */; };
+		53247F8C140B494F00C33061 /* DKArrayQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 53247F8B140B494F00C33061 /* DKArrayQuery.m */; };
+		53247F97140B4ADB00C33061 /* DKArrayQuerySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 53247F96140B4ADB00C33061 /* DKArrayQuerySpec.m */; };
+		53247F9E140B5D4500C33061 /* NSArray+ArrayQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 53247F9D140B5D4500C33061 /* NSArray+ArrayQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +109,11 @@
 		5304B10C140B420E00DF687E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		5304B10E140B421A00DF687E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		5304B110140B423800DF687E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		53247F8A140B494E00C33061 /* DKArrayQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKArrayQuery.h; sourceTree = "<group>"; };
+		53247F8B140B494F00C33061 /* DKArrayQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKArrayQuery.m; sourceTree = "<group>"; };
+		53247F96140B4ADB00C33061 /* DKArrayQuerySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKArrayQuerySpec.m; sourceTree = "<group>"; };
+		53247F9C140B5D4500C33061 /* NSArray+ArrayQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSArray+ArrayQuery.h"; sourceTree = "<group>"; };
+		53247F9D140B5D4500C33061 /* NSArray+ArrayQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ArrayQuery.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 				5304AFA1140B3CE400DF687E /* Support */,
 				5304AFBF140B40EC00DF687E /* DKPredicateBuilderSpec.m */,
 				5304AFC0140B40EC00DF687E /* DKPredicateSpec.m */,
+				53247F96140B4ADB00C33061 /* DKArrayQuerySpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -189,6 +198,10 @@
 				5304AFB9140B40C300DF687E /* DKPredicate.m */,
 				5304AFBA140B40C300DF687E /* DKPredicateBuilder.h */,
 				5304AFBB140B40C300DF687E /* DKPredicateBuilder.m */,
+				53247F8A140B494E00C33061 /* DKArrayQuery.h */,
+				53247F8B140B494F00C33061 /* DKArrayQuery.m */,
+				53247F9C140B5D4500C33061 /* NSArray+ArrayQuery.h */,
+				53247F9D140B5D4500C33061 /* NSArray+ArrayQuery.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -441,6 +454,9 @@
 				5304B103140B41BE00DF687E /* ISO8601DateFormatter.m in Sources */,
 				5304B104140B41BE00DF687E /* LoggerClient.m in Sources */,
 				5304B105140B41BE00DF687E /* RegexKitLite.m in Sources */,
+				53247F8C140B494F00C33061 /* DKArrayQuery.m in Sources */,
+				53247F97140B4ADB00C33061 /* DKArrayQuerySpec.m in Sources */,
+				53247F9E140B5D4500C33061 /* NSArray+ArrayQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +579,7 @@
 				5304AFB1140B3CE400DF687E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

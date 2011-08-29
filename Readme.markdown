@@ -24,6 +24,52 @@ You can also chain together predicates like this
 [[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
 ```
 
+`DKPredicateBuilder` also ships with a way to use the predicate builder
+with `NSArray` objects.
+
+```objective-c
+#import "DKArrayQuery.h"
+
+NSArray * namesArray = [NSArray arrayWithObjects:
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil],
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Keith", @"first_name", nil],
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Jordan", @"first_name", nil],
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Mario", @"first_name", nil],
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Dirk", @"first_name", nil],
+                            nil];
+
+DKArrayQuery * arrayQuery = [DKArrayQuery queryWithArray:namesArray];
+
+[arrayQuery where:@"first_name" startsWith:@"Ke"];
+[arrayQuery orderBy:@"first_name" ascending:YES];
+
+[arrayQuery perform:^(NSArray * records) {
+  // Returns an array with:
+  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil]
+  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Keith", @"first_name", nil]
+}];
+```
+
+There is also an NSArray category to make creating `DKArrayQuery`
+objects easy.
+
+```objective-c
+#import "NSArray+ArrayQuery.h"
+
+DKArrayQuery * arrayQuery = [[namesArray query] where:@"first_name" isNull:NO];
+```
+
+`DKArrayQuery` also makes it easy to run these calculations in a
+background thread. This is usefull for arrays with many records.
+
+```objective-c
+[arrayQuery perform:^(NSArray * records) {
+  // Returns an array with:
+  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil]
+  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Keith", @"first_name", nil]
+} background:YES];
+```
+
 It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
 and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
