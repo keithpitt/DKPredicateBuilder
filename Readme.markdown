@@ -21,11 +21,14 @@ NSLog(@"%@", [[predicateBuilder compoundPredicate] predicateFormat]);
 It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
 and [The Frontier Group](http://www.thefrontiergroup.com.au)
 
+For more information on the `NSPredicate` class, I highly recomend you checkout
+the [Predicate Programming Guide](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html)
+
 ## Usage
 
 ### Chaining
 
-You can also chain together predicates like this
+You can chain together predicates like so:
 
 ```objective-c
 [[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
@@ -59,7 +62,7 @@ DKArrayQuery * arrayQuery = [DKArrayQuery queryWithArray:namesArray];
 }];
 ```
 
-There is also an NSArray category to make creating `DKArrayQuery`
+There is also an `NSArray` category to make creating `DKArrayQuery`
 objects easy.
 
 ```objective-c
@@ -107,9 +110,6 @@ NSArray * objects = [managedObjectContext executeFetchRequest:fetchRequest error
 
 Copy the files within `Classes` into to your project folder, and add them to your
 XCode project.
-
-You will need to add [DKSupport](https://github.com/keithpitt/DKSupport)
-to your project.
 
 ## API
 
@@ -312,24 +312,7 @@ Returns an MD5 hash of the NSCompoundPredicate. This is usefull for cache keys.
 
 ## Running Specs
 
-Before running the specs, you'll need checkout the git submodules:
-
-```
-$ git submodule init
-$ git submodule update
-```
-
-Then, to run the specs, open [DKPredicateBuilder.xcodeproj](https://github.com/keithpitt/DKPredicateBuilder/tree/master/DKPredicateBuilder.xcodeproj) project, and run the `Specs` target. You will need to
-
-## Libraries Used
-
-* http://code.google.com/p/json-framework
-* https://github.com/petejkim/expecta
-* https://github.com/pivotal/cedar
-* http://boredzo.org/iso8601unparser/
-* http://regexkit.sourceforge.net/#RegexKitLite
-* https://github.com/fpillet/NSLogger
-* https://github.com/adamelliot/Inflections
+To run the specs, open [DKPredicateBuilder.xcodeproj](https://github.com/keithpitt/DKPredicateBuilder/tree/master/DKPredicateBuilder.xcodeproj) project, and run the `Specs` target. You will need to
 
 ## Note on Patches/Pull Requests
 

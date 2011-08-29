@@ -17,20 +17,6 @@
 		5304AFC2140B40EC00DF687E /* DKPredicateSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304AFC0140B40EC00DF687E /* DKPredicateSpec.m */; };
 		5304AFD8140B40FD00DF687E /* Cedar-iPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304AFC4140B40FD00DF687E /* Cedar-iPhone.framework */; };
 		5304AFD9140B40FD00DF687E /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304AFD5140B40FD00DF687E /* libExpecta-ios-universal.a */; };
-		5304B0EE140B41A900DF687E /* NSArray+Enumurable.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0D2140B41A900DF687E /* NSArray+Enumurable.m */; };
-		5304B0EF140B41A900DF687E /* NSDate+Conversions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0D5140B41A900DF687E /* NSDate+Conversions.m */; };
-		5304B0F0140B41A900DF687E /* NSDate+Initializers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0D7140B41A900DF687E /* NSDate+Initializers.m */; };
-		5304B0F1140B41A900DF687E /* NSMutableArray+Reverse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0DA140B41A900DF687E /* NSMutableArray+Reverse.m */; };
-		5304B0F2140B41A900DF687E /* NSNumber+Initializers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0DD140B41A900DF687E /* NSNumber+Initializers.m */; };
-		5304B0F3140B41A900DF687E /* NSObject+DelayedBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0E0140B41A900DF687E /* NSObject+DelayedBlock.m */; };
-		5304B0F4140B41A900DF687E /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0E3140B41A900DF687E /* NSString+Hash.m */; };
-		5304B0F5140B41A900DF687E /* NSString+Inflections.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0E5140B41A900DF687E /* NSString+Inflections.m */; };
-		5304B0F6140B41A900DF687E /* NSString+Initializers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0E7140B41A900DF687E /* NSString+Initializers.m */; };
-		5304B0F7140B41A900DF687E /* UIAlertView+Shortcuts.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0EA140B41A900DF687E /* UIAlertView+Shortcuts.m */; };
-		5304B0F8140B41A900DF687E /* UIViewController+ParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0ED140B41A900DF687E /* UIViewController+ParentController.m */; };
-		5304B103140B41BE00DF687E /* ISO8601DateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0FB140B41BE00DF687E /* ISO8601DateFormatter.m */; };
-		5304B104140B41BE00DF687E /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B0FE140B41BE00DF687E /* LoggerClient.m */; };
-		5304B105140B41BE00DF687E /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 5304B102140B41BE00DF687E /* RegexKitLite.m */; };
 		5304B10B140B41F500DF687E /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304B10A140B41F500DF687E /* libicucore.dylib */; };
 		5304B10D140B420E00DF687E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304B10C140B420E00DF687E /* CFNetwork.framework */; };
 		5304B10F140B421A00DF687E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5304B10E140B421A00DF687E /* MobileCoreServices.framework */; };
@@ -74,37 +60,6 @@
 		5304AFD6140B40FD00DF687E /* NSObject+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Expecta.h"; sourceTree = "<group>"; };
 		5304AFD7140B40FD00DF687E /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
 		5304AFDA140B411900DF687E /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
-		5304B0CE140B41A900DF687E /* DKLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKLogger.h; path = DKSupport/Classes/DKLogger.h; sourceTree = "<group>"; };
-		5304B0CF140B41A900DF687E /* DKSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKSupport.h; path = DKSupport/Classes/DKSupport.h; sourceTree = "<group>"; };
-		5304B0D1140B41A900DF687E /* NSArray+Enumurable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Enumurable.h"; sourceTree = "<group>"; };
-		5304B0D2140B41A900DF687E /* NSArray+Enumurable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Enumurable.m"; sourceTree = "<group>"; };
-		5304B0D4140B41A900DF687E /* NSDate+Conversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Conversions.h"; sourceTree = "<group>"; };
-		5304B0D5140B41A900DF687E /* NSDate+Conversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Conversions.m"; sourceTree = "<group>"; };
-		5304B0D6140B41A900DF687E /* NSDate+Initializers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Initializers.h"; sourceTree = "<group>"; };
-		5304B0D7140B41A900DF687E /* NSDate+Initializers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Initializers.m"; sourceTree = "<group>"; };
-		5304B0D9140B41A900DF687E /* NSMutableArray+Reverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Reverse.h"; sourceTree = "<group>"; };
-		5304B0DA140B41A900DF687E /* NSMutableArray+Reverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Reverse.m"; sourceTree = "<group>"; };
-		5304B0DC140B41A900DF687E /* NSNumber+Initializers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Initializers.h"; sourceTree = "<group>"; };
-		5304B0DD140B41A900DF687E /* NSNumber+Initializers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Initializers.m"; sourceTree = "<group>"; };
-		5304B0DF140B41A900DF687E /* NSObject+DelayedBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DelayedBlock.h"; sourceTree = "<group>"; };
-		5304B0E0140B41A900DF687E /* NSObject+DelayedBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DelayedBlock.m"; sourceTree = "<group>"; };
-		5304B0E2140B41A900DF687E /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		5304B0E3140B41A900DF687E /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
-		5304B0E4140B41A900DF687E /* NSString+Inflections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Inflections.h"; sourceTree = "<group>"; };
-		5304B0E5140B41A900DF687E /* NSString+Inflections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Inflections.m"; sourceTree = "<group>"; };
-		5304B0E6140B41A900DF687E /* NSString+Initializers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Initializers.h"; sourceTree = "<group>"; };
-		5304B0E7140B41A900DF687E /* NSString+Initializers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Initializers.m"; sourceTree = "<group>"; };
-		5304B0E9140B41A900DF687E /* UIAlertView+Shortcuts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Shortcuts.h"; sourceTree = "<group>"; };
-		5304B0EA140B41A900DF687E /* UIAlertView+Shortcuts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Shortcuts.m"; sourceTree = "<group>"; };
-		5304B0EC140B41A900DF687E /* UIViewController+ParentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ParentController.h"; sourceTree = "<group>"; };
-		5304B0ED140B41A900DF687E /* UIViewController+ParentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ParentController.m"; sourceTree = "<group>"; };
-		5304B0FA140B41BE00DF687E /* ISO8601DateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISO8601DateFormatter.h; sourceTree = "<group>"; };
-		5304B0FB140B41BE00DF687E /* ISO8601DateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISO8601DateFormatter.m; sourceTree = "<group>"; };
-		5304B0FD140B41BE00DF687E /* LoggerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerClient.h; sourceTree = "<group>"; };
-		5304B0FE140B41BE00DF687E /* LoggerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggerClient.m; sourceTree = "<group>"; };
-		5304B0FF140B41BE00DF687E /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggerCommon.h; sourceTree = "<group>"; };
-		5304B101140B41BE00DF687E /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
-		5304B102140B41BE00DF687E /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		5304B10A140B41F500DF687E /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/lib/libicucore.dylib; sourceTree = DEVELOPER_DIR; };
 		5304B10C140B420E00DF687E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		5304B10E140B421A00DF687E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
@@ -112,7 +67,7 @@
 		53247F8A140B494E00C33061 /* DKArrayQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKArrayQuery.h; sourceTree = "<group>"; };
 		53247F8B140B494F00C33061 /* DKArrayQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKArrayQuery.m; sourceTree = "<group>"; };
 		53247F96140B4ADB00C33061 /* DKArrayQuerySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKArrayQuerySpec.m; sourceTree = "<group>"; };
-		53247F9C140B5D4500C33061 /* NSArray+ArrayQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "NSArray+ArrayQuery.h"; sourceTree = "<group>"; };
+		53247F9C140B5D4500C33061 /* NSArray+ArrayQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ArrayQuery.h"; sourceTree = "<group>"; };
 		53247F9D140B5D4500C33061 /* NSArray+ArrayQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+ArrayQuery.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,10 +164,6 @@
 		5304AFC3140B40FD00DF687E /* External */ = {
 			isa = PBXGroup;
 			children = (
-				5304B0F9140B41BE00DF687E /* ISO8601DateFormatter */,
-				5304B0FC140B41BE00DF687E /* NSLogger */,
-				5304B100140B41BE00DF687E /* RegexKitLite */,
-				5304B0CD140B419A00DF687E /* DKSupport */,
 				5304AFC4140B40FD00DF687E /* Cedar-iPhone.framework */,
 				5304AFC5140B40FD00DF687E /* Expecta */,
 			);
@@ -242,140 +193,6 @@
 				5304AFD7140B40FD00DF687E /* NSValue+Expecta.h */,
 			);
 			path = Expecta;
-			sourceTree = "<group>";
-		};
-		5304B0CD140B419A00DF687E /* DKSupport */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0CE140B41A900DF687E /* DKLogger.h */,
-				5304B0CF140B41A900DF687E /* DKSupport.h */,
-				5304B0D0140B41A900DF687E /* NSArray */,
-				5304B0D3140B41A900DF687E /* NSDate */,
-				5304B0D8140B41A900DF687E /* NSMutableArray */,
-				5304B0DB140B41A900DF687E /* NSNumber */,
-				5304B0DE140B41A900DF687E /* NSObject */,
-				5304B0E1140B41A900DF687E /* NSString */,
-				5304B0E8140B41A900DF687E /* UIAlertView */,
-				5304B0EB140B41A900DF687E /* UIViewController */,
-			);
-			name = DKSupport;
-			sourceTree = "<group>";
-		};
-		5304B0D0140B41A900DF687E /* NSArray */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0D1140B41A900DF687E /* NSArray+Enumurable.h */,
-				5304B0D2140B41A900DF687E /* NSArray+Enumurable.m */,
-			);
-			name = NSArray;
-			path = DKSupport/Classes/NSArray;
-			sourceTree = "<group>";
-		};
-		5304B0D3140B41A900DF687E /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0D4140B41A900DF687E /* NSDate+Conversions.h */,
-				5304B0D5140B41A900DF687E /* NSDate+Conversions.m */,
-				5304B0D6140B41A900DF687E /* NSDate+Initializers.h */,
-				5304B0D7140B41A900DF687E /* NSDate+Initializers.m */,
-			);
-			name = NSDate;
-			path = DKSupport/Classes/NSDate;
-			sourceTree = "<group>";
-		};
-		5304B0D8140B41A900DF687E /* NSMutableArray */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0D9140B41A900DF687E /* NSMutableArray+Reverse.h */,
-				5304B0DA140B41A900DF687E /* NSMutableArray+Reverse.m */,
-			);
-			name = NSMutableArray;
-			path = DKSupport/Classes/NSMutableArray;
-			sourceTree = "<group>";
-		};
-		5304B0DB140B41A900DF687E /* NSNumber */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0DC140B41A900DF687E /* NSNumber+Initializers.h */,
-				5304B0DD140B41A900DF687E /* NSNumber+Initializers.m */,
-			);
-			name = NSNumber;
-			path = DKSupport/Classes/NSNumber;
-			sourceTree = "<group>";
-		};
-		5304B0DE140B41A900DF687E /* NSObject */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0DF140B41A900DF687E /* NSObject+DelayedBlock.h */,
-				5304B0E0140B41A900DF687E /* NSObject+DelayedBlock.m */,
-			);
-			name = NSObject;
-			path = DKSupport/Classes/NSObject;
-			sourceTree = "<group>";
-		};
-		5304B0E1140B41A900DF687E /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0E2140B41A900DF687E /* NSString+Hash.h */,
-				5304B0E3140B41A900DF687E /* NSString+Hash.m */,
-				5304B0E4140B41A900DF687E /* NSString+Inflections.h */,
-				5304B0E5140B41A900DF687E /* NSString+Inflections.m */,
-				5304B0E6140B41A900DF687E /* NSString+Initializers.h */,
-				5304B0E7140B41A900DF687E /* NSString+Initializers.m */,
-			);
-			name = NSString;
-			path = DKSupport/Classes/NSString;
-			sourceTree = "<group>";
-		};
-		5304B0E8140B41A900DF687E /* UIAlertView */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0E9140B41A900DF687E /* UIAlertView+Shortcuts.h */,
-				5304B0EA140B41A900DF687E /* UIAlertView+Shortcuts.m */,
-			);
-			name = UIAlertView;
-			path = DKSupport/Classes/UIAlertView;
-			sourceTree = "<group>";
-		};
-		5304B0EB140B41A900DF687E /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0EC140B41A900DF687E /* UIViewController+ParentController.h */,
-				5304B0ED140B41A900DF687E /* UIViewController+ParentController.m */,
-			);
-			name = UIViewController;
-			path = DKSupport/Classes/UIViewController;
-			sourceTree = "<group>";
-		};
-		5304B0F9140B41BE00DF687E /* ISO8601DateFormatter */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0FA140B41BE00DF687E /* ISO8601DateFormatter.h */,
-				5304B0FB140B41BE00DF687E /* ISO8601DateFormatter.m */,
-			);
-			name = ISO8601DateFormatter;
-			path = DKSupport/External/ISO8601DateFormatter;
-			sourceTree = "<group>";
-		};
-		5304B0FC140B41BE00DF687E /* NSLogger */ = {
-			isa = PBXGroup;
-			children = (
-				5304B0FD140B41BE00DF687E /* LoggerClient.h */,
-				5304B0FE140B41BE00DF687E /* LoggerClient.m */,
-				5304B0FF140B41BE00DF687E /* LoggerCommon.h */,
-			);
-			name = NSLogger;
-			path = DKSupport/External/NSLogger;
-			sourceTree = "<group>";
-		};
-		5304B100140B41BE00DF687E /* RegexKitLite */ = {
-			isa = PBXGroup;
-			children = (
-				5304B101140B41BE00DF687E /* RegexKitLite.h */,
-				5304B102140B41BE00DF687E /* RegexKitLite.m */,
-			);
-			name = RegexKitLite;
-			path = DKSupport/External/RegexKitLite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,20 +257,6 @@
 				5304AFBD140B40C300DF687E /* DKPredicateBuilder.m in Sources */,
 				5304AFC1140B40EC00DF687E /* DKPredicateBuilderSpec.m in Sources */,
 				5304AFC2140B40EC00DF687E /* DKPredicateSpec.m in Sources */,
-				5304B0EE140B41A900DF687E /* NSArray+Enumurable.m in Sources */,
-				5304B0EF140B41A900DF687E /* NSDate+Conversions.m in Sources */,
-				5304B0F0140B41A900DF687E /* NSDate+Initializers.m in Sources */,
-				5304B0F1140B41A900DF687E /* NSMutableArray+Reverse.m in Sources */,
-				5304B0F2140B41A900DF687E /* NSNumber+Initializers.m in Sources */,
-				5304B0F3140B41A900DF687E /* NSObject+DelayedBlock.m in Sources */,
-				5304B0F4140B41A900DF687E /* NSString+Hash.m in Sources */,
-				5304B0F5140B41A900DF687E /* NSString+Inflections.m in Sources */,
-				5304B0F6140B41A900DF687E /* NSString+Initializers.m in Sources */,
-				5304B0F7140B41A900DF687E /* UIAlertView+Shortcuts.m in Sources */,
-				5304B0F8140B41A900DF687E /* UIViewController+ParentController.m in Sources */,
-				5304B103140B41BE00DF687E /* ISO8601DateFormatter.m in Sources */,
-				5304B104140B41BE00DF687E /* LoggerClient.m in Sources */,
-				5304B105140B41BE00DF687E /* RegexKitLite.m in Sources */,
 				53247F8C140B494F00C33061 /* DKArrayQuery.m in Sources */,
 				53247F97140B4ADB00C33061 /* DKArrayQuerySpec.m in Sources */,
 				53247F9E140B5D4500C33061 /* NSArray+ArrayQuery.m in Sources */,
@@ -486,7 +289,6 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 					"\"$(SRCROOT)/External\"",
-					"\"$(SRCROOT)/External/DKSupport/External\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -507,7 +309,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/External/Expecta\"",
-					"\"$(SRCROOT)/External/DKSupport/External/Expecta\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lstdc++",
@@ -531,7 +332,6 @@
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 					"\"$(SRCROOT)/External\"",
-					"\"$(SRCROOT)/External/DKSupport/External\"",
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -545,7 +345,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/External/Expecta\"",
-					"\"$(SRCROOT)/External/DKSupport/External/Expecta\"",
 				);
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
