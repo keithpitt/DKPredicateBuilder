@@ -24,6 +24,11 @@ and [The Frontier Group](http://www.thefrontiergroup.com.au)
 For more information on the `NSPredicate` class, check out the
 [Predicate Programming Guide](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html)
 
+## Installation
+
+Copy the files within `Classes` into to your project folder, and add them to your
+XCode project.
+
 ## Usage
 
 ### Working with NSArray
@@ -118,11 +123,6 @@ You can chain together predicates like so:
 ```objective-c
 [[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
 ```
-
-## Installation
-
-Copy the files within `Classes` into to your project folder, and add them to your
-XCode project.
 
 ## API
 
