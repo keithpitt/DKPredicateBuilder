@@ -1,7 +1,12 @@
 # DKPredicateBuilder
 
 The predicate builder is an easy way to generate `NSPredicate` objects for use
-with your Core Data and NSArray queries.
+with your `NSFetchRequest` and `NSArray` queries.
+
+It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
+and [The Frontier Group](http://www.thefrontiergroup.com.au)
+
+## Usage
 
 ```objective-c
 #import "DKPredicateBuilder.h"
@@ -12,17 +17,21 @@ DKPredicateBuilder * predicateBuilder = [[DKPredicateBuilder alloc] init];
 [predicateBuilder where:@"count" greaterThan:[NSNumber numberWithInt:12]];
 [predicateBuilder where:@"username" isNull:NO];
 
-NSLog(@"%@", [compoundPredicate predicateFormat]);
+NSLog(@"%@", [[predicateBuilder compoundPredicate] predicateFormat]);
 // "name == \"keith\" AND count > 12 AND username != nil"
 
 [predicateBuilder release];
 ```
+
+#### Chaining
 
 You can also chain together predicates like this
 
 ```objective-c
 [[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
 ```
+
+#### Working with NSArray
 
 `DKPredicateBuilder` also ships with a way to use the predicate builder
 with `NSArray` objects.
@@ -68,8 +77,31 @@ background thread. This is usefull for arrays with many records.
 } background:YES];
 ```
 
-It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
-and [The Frontier Group](http://www.thefrontiergroup.com.au)
+#### Working with Core Data
+
+If you want to use `DKArrayQuery` with Core Data, I highly recommend you
+check out [DKCoreData](https://github.com/keithpitt/DKCoreData), but if
+you just want to use this class directly with an `NSFetchRequest` this
+is how it would look:
+
+```objective-c
+// Create the predicate builder
+DKPredicateBuilder * predicateBuilder = [[DKPredicateBuilder alloc] init];
+[predicateBuilder where:@"name" equals:@"Something"];
+[predicateBuilder orderBy:@"name" ascending:YES];
+
+// Setup a request for an existing object
+NSFetchRequest * fetchRequest = [NSFetchRequest new];
+
+// Add the predicates
+[fetchRequest setPredicate:[predicateBuilder compoundPredicate]];
+
+// Add the sorters
+[fetchRequest setSortDescriptors:[predicateBuilder sorters]];
+
+// Execute the fetch request
+NSArray * objects = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+```
 
 ## Installation
 
