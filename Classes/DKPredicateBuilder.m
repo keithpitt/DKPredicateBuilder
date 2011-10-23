@@ -8,12 +8,9 @@
 
 #import "DKPredicateBuilder.h"
 
-#import "NSString+Hash.h"
-
 @implementation DKPredicateBuilder
 
 @synthesize predicates, sorters, limit, offset;
-@synthesize lastPerformDate;
 
 - (id)init {
         
@@ -335,29 +332,6 @@
                                                                           subpredicates:collectedPredicates];
     
     return [compoundPredicate autorelease];
-    
-}
-
-- (NSString *)compoundPredicateKey {
-    
-    return [[self.compoundPredicate predicateFormat] md5];
-    
-}
-
-- (void)setLastPerformDate:(NSDate *)value {
-    
-    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    [userDefaults setValue:value forKey:[NSString stringWithFormat:@"DKPredicateBuilder/%@", [self compoundPredicateKey]]];
-    [userDefaults synchronize];
-    
-}
-
-- (NSDate *)lastPerformDate {
-    
-    NSUserDefaults * userDefaults = [NSUserDefaults standardUserDefaults];
-    
-    return (NSDate *)[userDefaults valueForKey:[NSString stringWithFormat:@"DKPredicateBuilder/%@", [self compoundPredicateKey]]];
     
 }
 

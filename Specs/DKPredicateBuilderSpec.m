@@ -37,27 +37,4 @@ context(@"-compoundPredicate", ^{
     
 });
 
-context(@"-compoundPredicateKey", ^{
-    
-    it(@"should return a unique key for the predicate", ^{
-        
-        expect([predicateBuilder compoundPredicateKey]).toEqual(@"06B2D8BB9C2B5EE01FA4D70C3D06F8E0");
-        
-    });
-    
-});
-
-context(@"lastPerformDate", ^{
-    
-    it(@"should return the last perform date", ^{
-        
-        NSDate * now = [NSDate date];
-        [predicateBuilder setLastPerformDate:now];
-        
-        expect(predicateBuilder.lastPerformDate).toEqual(now);
-        
-    });
-    
-});
-
 SPEC_END

@@ -1,7 +1,7 @@
 # DKPredicateBuilder
 
 The predicate builder is an easy way to generate `NSPredicate` objects for use
-with your Core Data and NSArray queries.
+with your `NSFetchRequest` and `NSArray` queries.
 
 ```objective-c
 #import "DKPredicateBuilder.h"
@@ -12,34 +12,123 @@ DKPredicateBuilder * predicateBuilder = [[DKPredicateBuilder alloc] init];
 [predicateBuilder where:@"count" greaterThan:[NSNumber numberWithInt:12]];
 [predicateBuilder where:@"username" isNull:NO];
 
-NSLog(@"%@", [compoundPredicate predicateFormat]);
+NSLog(@"%@", [[predicateBuilder compoundPredicate] predicateFormat]);
 // "name == \"keith\" AND count > 12 AND username != nil"
 
 [predicateBuilder release];
 ```
 
-You can also chain together predicates like this
-
-```objective-c
-[[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
-```
-
 It is used in the apps written by [Mostly Disco](http://www.mostlydisco.com)
 and [The Frontier Group](http://www.thefrontiergroup.com.au)
+
+For more information on the `NSPredicate` class, check out the
+[Predicate Programming Guide](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/Predicates/predicates.html)
 
 ## Installation
 
 Copy the files within `Classes` into to your project folder, and add them to your
 XCode project.
 
-You will need to add [DKSupport](https://github.com/keithpitt/DKSupport)
-to your project.
+## Usage
+
+### Working with NSArray
+
+`DKPredicateBuilder` ships with a way to use the predicate builder
+with `NSArray` objects.
+
+```objective-c
+#import "DKArrayQuery.h"
+
+NSArray * namesArray = [NSArray arrayWithObjects:
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil],
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Keith", @"first_name", nil],
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Jordan", @"first_name", nil],
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Mario", @"first_name", nil],
+                            [NSDictionary dictionaryWithObjectsAndKeys:@"Dirk", @"first_name", nil],
+                            nil];
+
+DKArrayQuery * arrayQuery = [DKArrayQuery queryWithArray:namesArray];
+
+[arrayQuery where:@"first_name" startsWith:@"Ke"];
+[arrayQuery orderBy:@"first_name" ascending:YES];
+
+[arrayQuery perform:^(NSArray * records) {
+  // Returns an array with this order;
+  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Keith", @"first_name", nil]
+  //   [NSDictionary dictionaryWithObjectsAndKeys:@"Kevin", @"first_name", nil]
+}];
+```
+
+`NSArray+ArrayQuery.h` provides an Objective-C category that makes creating
+instances of `DKArrayQuery` easy.
+
+```objective-c
+#import "NSArray+ArrayQuery.h"
+
+DKArrayQuery * arrayQuery = [[namesArray query] where:@"first_name" isNull:NO];
+```
+
+`DKArrayQuery` also makes it easy to run these calculations in a
+background thread. This is usefull for arrays with many records.
+
+```objective-c
+// The block will be called on the main thread while the records
+// are calculated in a background thread.
+[arrayQuery perform:^(NSArray * records) {
+  // ...
+} background:YES];
+```
+
+### Working with Core Data
+
+If you want to use `DKPredicateBuilder` with Core Data, I highly recommend you
+check out [DKCoreData](https://github.com/keithpitt/DKCoreData), but if
+you just want to use this class directly with an `NSFetchRequest` this
+is how it would look:
+
+```objective-c
+// Create the predicate builder
+DKPredicateBuilder * predicateBuilder = [[DKPredicateBuilder alloc] init];
+
+[predicateBuilder where:@"name" equals:@"Something"];
+[predicateBuilder orderBy:@"name" ascending:YES];
+[predicateBuilder limit:20];
+[predicateBuilder offset:20];
+
+// Setup a request for an existing object
+NSFetchRequest * fetchRequest = [NSFetchRequest new];
+
+// Add the predicates
+[fetchRequest setPredicate:[predicateBuilder compoundPredicate]];
+
+// Add the sorters
+[fetchRequest setSortDescriptors:[predicateBuilder sorters]];
+
+// Set the limit if one is defined
+if (self.limit)
+    [fetchRequest setFetchLimit:[predicateBuilder.limit integerValue]];
+        
+// Set the offset if one is defined
+if (self.offset)
+    [fetchRequest setFetchOffset:[predicateBuilder.offset integerValue]];
+
+// Execute the fetch request
+NSArray * objects = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
+```
+
+### Chaining
+
+You can chain together predicates like so:
+
+```objective-c
+[[predicateBuilder where:@"name" equals:@"keith"] where:@"username" isNull:NO]
+```
 
 ## API
 
 `- (id)where:(DKPredicate *)predicate;`
 
-Add a custom NSPredicate to the builder
+Add your own `NSPredicate` to the builder
 
 `- (id)where:(NSString *)key isTrue:(BOOL)value;`
 
@@ -203,7 +292,7 @@ The key is between the first value and the second value
 
 `- (id)orderBy:(NSString *)column ascending:(BOOL)ascending;`
 
-Creates an NSSortDescriptor and add it to the `sorters` property on the
+Creates an `NSSortDescriptor` and add it to the `sorters` property on the
 `DKPropertyBuilder`
 
 ```objective-c
@@ -230,30 +319,9 @@ Specify an offset for the query
 
 Returns an `NSCompoundPredicate` with all the predicates defined
 
-`- (NSString *)compoundPredicateKey;`
-
-Returns an MD5 hash of the NSCompoundPredicate. This is usefull for cache keys.
-
 ## Running Specs
 
-Before running the specs, you'll need checkout the git submodules:
-
-```
-$ git submodule init
-$ git submodule update
-```
-
-Then, to run the specs, open [DKPredicateBuilder.xcodeproj](https://github.com/keithpitt/DKPredicateBuilder/tree/master/DKPredicateBuilder.xcodeproj) project, and run the `Specs` target. You will need to
-
-## Libraries Used
-
-* http://code.google.com/p/json-framework
-* https://github.com/petejkim/expecta
-* https://github.com/pivotal/cedar
-* http://boredzo.org/iso8601unparser/
-* http://regexkit.sourceforge.net/#RegexKitLite
-* https://github.com/fpillet/NSLogger
-* https://github.com/adamelliot/Inflections
+To run the specs, open [DKPredicateBuilder.xcodeproj](https://github.com/keithpitt/DKPredicateBuilder/tree/master/DKPredicateBuilder.xcodeproj) project, and run the `Specs` target.
 
 ## Note on Patches/Pull Requests
 

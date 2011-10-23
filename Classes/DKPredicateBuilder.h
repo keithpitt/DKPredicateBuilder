@@ -27,8 +27,6 @@ typedef void (^DKQueryFinishBlock)(NSArray * records, NSError * error);
 @property (nonatomic, retain) NSNumber * limit;
 @property (nonatomic, retain) NSNumber * offset;
 
-@property (nonatomic, copy) NSDate * lastPerformDate;
-
 - (id)where:(DKPredicate *)predicate;
 
 - (id)where:(NSString *)key isFalse:(BOOL)value;
@@ -63,6 +61,5 @@ typedef void (^DKQueryFinishBlock)(NSArray * records, NSError * error);
 - (id)offset:(int)value;
 
 - (NSCompoundPredicate *)compoundPredicate;
-- (NSString *)compoundPredicateKey;
 
 @end
