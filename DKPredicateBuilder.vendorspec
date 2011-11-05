@@ -1,0 +1,17 @@
+# This is a generated version of the vendorspec. Please change the
+# values to suit your library.
+
+Vendor::Spec.new do |s|
+
+  s.name        = "DKPredicateBuilder"
+  s.version     = "0.1"
+
+  s.authors     = "keithpitt"
+  s.email       = "me@keithpitt.com"
+  s.description = "A set of classes that make it easy to work with NSPredicates"
+
+  s.source      = "https://github.com/keithpitt/DKPredicateBuilder"
+
+  s.files       = `git ls-files Classes`.split("\n")
+
+end
